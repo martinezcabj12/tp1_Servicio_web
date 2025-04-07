@@ -4,44 +4,60 @@
   --color-primary: #EA7300;
   --color-secundary: #E83F25;
   --color-background: #A62C2C;
+  --font-menu: Boldonse;
+  --font-black: Urbanist-Black;
+  --font-regular: Urbanist-Regular;
+  --fontSize-responsivoNav: clamp(14px, 1.2vw, 22px);
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: var(--color-background);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
-ul,
-li {
-  list-style: none;
-}
-
+/* Header */
 .header_container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   height: 100px;
   text-transform: uppercase;
-
-  & img {
-    width: 190px;
-    height: auto;
-  }
 }
 
-.nav_container li:first-child {
+.header_container ul,
+.header_container li {
+  list-style: none;
+}
+
+/* Logo */
+.header_container_logo img {
+  width: clamp(120px, 12vw, 190px);
+  height: auto;
+}
+
+/* Navegación principal */
+.nav_container>li {
+  position: relative;
+  font-family: var(--font-menu), Verdana, Geneva, Tahoma, sans-serif;
   color: var(--font-primary);
-  /* background-color: var(--color-primary); */
+  font-size: var(--fontSize-responsivoNav);
 }
 
-
+/* Links del menú */
 .nav_container li a {
   color: var(--font-primary);
   text-decoration: none;
+  font-size: clamp(10px, 1vw, 16px);
+  /* font-size: clamp(14px, 2vw, 22px); */
   background-color: var(--color-secundary);
   padding: 10px 15px;
   display: block;
@@ -51,6 +67,7 @@ li {
   background-color: var(--color-primary);
 }
 
+/* Submenú */
 .nav_container li ul {
   display: none;
   position: absolute;
