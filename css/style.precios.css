@@ -1,0 +1,103 @@
+.pricing-section {
+  height: 600px;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 10rem;
+}
+
+.toggle-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#togglePlan {
+  display: none;
+}
+
+.toggle-container label {
+  width: 50px;
+  height: 26px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-container label::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s ease;
+}
+
+#togglePlan:checked+label::after {
+  left: 26px;
+}
+
+#togglePlan:checked+label {
+  background: #28a745;
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.destacado {
+  border: 2px solid #0077cc;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/* Tooltips */
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}

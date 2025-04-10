@@ -7,7 +7,7 @@
   <title>Precios - Gym Mamba</title>
   <link href="../css/font.css" rel="stylesheet">
   <link href="../css/global.css" rel="stylesheet">
-  <link href="../css/style.clases.css" rel="stylesheet">
+  <link href="../css/style.precios.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,10 +28,83 @@
         </li>
       </ul>
     </nav>
-    <section>
-
-    </section>
   </header>
+  <section class="pricing-section">
+    <h2>Planes de Membresía</h2>
+
+    <div class="toggle-container">
+      <span>Mensual</span>
+      <input type="checkbox" id="togglePlan">
+      <label for="togglePlan"></label>
+      <span>Anual</span>
+    </div>
+
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h3>Plan Básico</h3>
+        <p class="price" data-mensual="$5.000" data-anual="$50.000">$5.000</p>
+        <ul>
+          <li>Acceso al gym <span class="tooltip" data-tooltip="Incluye acceso ilimitado">🛈</span></li>
+          <li>Ducha y vestuario</li>
+        </ul>
+        <button>Elegir Plan</button>
+      </div>
+
+      <div class="pricing-card destacado">
+        <h3>Plan Plus</h3>
+        <p class="price" data-mensual="$8.000" data-anual="$80.000">$8.000</p>
+        <ul>
+          <li>Todo lo del básico</li>
+          <li>+ Clases grupales <span class="tooltip" data-tooltip="Yoga, spinning, funcional y más">🛈</span></li>
+        </ul>
+        <button>Elegir Plan</button>
+      </div>
+    </div>
+  </section>
+  </header>
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h2>Suscribite a nuestro Newsletter</h2>
+        <form>
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="footer-social">
+        <h2>Seguinos</h2>
+        <div class="social-links">
+          <a href="#" target="_blank">Facebook</a>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">X</a>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="footer-map">
+        <h2>Encontranos</h2>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-65.306517%2C-24.202954%2C-65.305517%2C-24.201954&amp;layer=mapnik&amp;marker=-24.202454%2C-65.306017"
+          style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('togglePlan');
+    const precios = document.querySelectorAll('.price');
+
+    toggle.addEventListener('change', () => {
+      precios.forEach(precio => {
+        precio.textContent = toggle.checked ? precio.dataset.anual : precio.dataset.mensual;
+      });
+    });
+  </script>
 
 </body>
 
