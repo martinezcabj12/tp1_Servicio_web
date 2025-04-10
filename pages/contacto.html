@@ -51,35 +51,32 @@
           <input type="email" id="mail" name="mail" placeholder="Ej: ejemplo@correo.com..." required>
 
           <label for="provincia">Provincia:</label>
-          <input list="provincias" id="provincia" name="provincia"
-            pattern="Buenos Aires|Catamarca|Chaco|Chubut|Córdoba|Corrientes|Entre Ríos|Formosa|Jujuy|La Pampa|La Rioja|Mendoza|Misiones|Neuquén|Río Negro|Salta|San Juan|San Luis|Santa Cruz|Santa Fe|Santiago del Estero|Tierra del Fuego|Tucumán"
-            placeholder="Ej: Córdoba" required>
-
-          <datalist id="provincias">
-            <option value="Buenos Aires">
-            <option value="Catamarca">
-            <option value="Chaco">
-            <option value="Chubut">
-            <option value="Córdoba">
-            <option value="Corrientes">
-            <option value="Entre Ríos">
-            <option value="Formosa">
-            <option value="Jujuy">
-            <option value="La Pampa">
-            <option value="La Rioja">
-            <option value="Mendoza">
-            <option value="Misiones">
-            <option value="Neuquén">
-            <option value="Río Negro">
-            <option value="Salta">
-            <option value="San Juan">
-            <option value="San Luis">
-            <option value="Santa Cruz">
-            <option value="Santa Fe">
-            <option value="Santiago del Estero">
-            <option value="Tierra del Fuego">
-            <option value="Tucumán">
-          </datalist>
+          <select id="provincia" name="provincia" required>
+            <option value="" disabled selected>Selecciona una provincia</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Ríos">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquén">Neuquén</option>
+            <option value="Río Negro">Río Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucumán">Tucumán</option>
+          </select>
 
           <label for="tipoConsulta">Tipo de consulta:</label>
           <select id="tipoConsulta" name="tipoConsulta" required>
@@ -90,7 +87,7 @@
             <option value="reclamos">Reclamos</option>
           </select>
           <label for="consulta">Consulta:</label>
-          <textarea name="consulta" id="consulta" placeholder="Escribir consulta..."></textarea>
+          <textarea name="consulta" id="consulta" placeholder="Escribir consulta..." required></textarea>
           <label class="terminos-check">
             <input class="input-check" name="terminos" type="checkbox" id="terminos" required>
             Aceptar los <a href="#">términos y condiciones</a>

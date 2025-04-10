@@ -65,8 +65,8 @@ form textarea:valid {
 form textarea {
   resize: none;
   min-height: 80px;
-  form-sizing: content;
   /* Chrome, Edge, Opera, Safari */
+  form-sizing: content;
 }
 
 form input[type="checkbox"] {
