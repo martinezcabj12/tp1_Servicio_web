@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gym Mamba</title>
+  <link href="../css/font.css" rel="stylesheet">
+  <link href="../css/global.css" rel="stylesheet">
+  <link href="../css/style.contacto.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header_container">
+    <div class="header_container_logo">
+      <a href="../index.html">
+        <img src="../public/logo.png" alt="logo" title="Gimnasio Mambo">
+      </a>
+    </div>
+    <nav class="header_container_nav">
+      <ul class="nav_container">
+        <li>Menu
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="precios.html">Precios</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="form-container">
+      <form class="form-container-item" action="" method="">
+        <fieldset>
+          <legend>Formulario de Contacto</legend>
+
+          <label for="first-name">Nombre:</label>
+          <input type="text" id="first-name" name="first-name" placeholder="Tu nombre" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+"
+            minlength="2" maxlength="40" required>
+
+          <label for="last-name">Apellido:</label>
+          <input type="text" id="last-name" name="last-name" placeholder="Tu apellido" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+"
+            minlength="2" maxlength="40" required>
+
+          <label for="age">Edad:</label>
+          <input type="number" id="age" name="age" min="12" max="50" placeholder="0" required>
+
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="mail" placeholder="Ej: ejemplo@correo.com..." required>
+
+          <label for="provincia">Provincia:</label>
+          <input list="provincias" id="provincia" name="provincia"
+            pattern="Buenos Aires|Catamarca|Chaco|Chubut|Córdoba|Corrientes|Entre Ríos|Formosa|Jujuy|La Pampa|La Rioja|Mendoza|Misiones|Neuquén|Río Negro|Salta|San Juan|San Luis|Santa Cruz|Santa Fe|Santiago del Estero|Tierra del Fuego|Tucumán"
+            placeholder="Ej: Córdoba" required>
+
+          <datalist id="provincias">
+            <option value="Buenos Aires">
+            <option value="Catamarca">
+            <option value="Chaco">
+            <option value="Chubut">
+            <option value="Córdoba">
+            <option value="Corrientes">
+            <option value="Entre Ríos">
+            <option value="Formosa">
+            <option value="Jujuy">
+            <option value="La Pampa">
+            <option value="La Rioja">
+            <option value="Mendoza">
+            <option value="Misiones">
+            <option value="Neuquén">
+            <option value="Río Negro">
+            <option value="Salta">
+            <option value="San Juan">
+            <option value="San Luis">
+            <option value="Santa Cruz">
+            <option value="Santa Fe">
+            <option value="Santiago del Estero">
+            <option value="Tierra del Fuego">
+            <option value="Tucumán">
+          </datalist>
+
+          <label for="tipoConsulta">Tipo de consulta:</label>
+          <select id="tipoConsulta" name="tipoConsulta" required>
+            <option value="">-- Seleccioná un tipo --</option>
+            <option value="general">Consulta general</option>
+            <option value="tecnica">Consulta técnica</option>
+            <option value="ventas">Revisión de datos</option>
+            <option value="reclamos">Reclamos</option>
+          </select>
+          <label for="consulta">Consulta:</label>
+          <textarea name="consulta" id="consulta" placeholder="Escribir consulta..."></textarea>
+          <label class="terminos-check">
+            <input class="input-check" name="terminos" type="checkbox" id="terminos" required>
+            Aceptar los <a href="#">términos y condiciones</a>
+          </label>
+          <button type="submit" id="enviar" disabled>Enviar</button>
+        </fieldset>
+      </form>
+
+  </main>
+
+  <script>
+    const checkbox = document.getElementById('terminos');
+    const boton = document.getElementById('enviar');
+
+    checkbox.addEventListener('change', () => {
+      boton.disabled = !checkbox.checked;
+    });
+  </script>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h2>Suscribite a nuestro Newsletter</h2>
+        <form>
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="footer-social">
+        <h2>Seguinos</h2>
+        <div class="social-links">
+          <a href="#" target="_blank">Facebook</a>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">X</a>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="footer-map">
+        <h2>Encontranos</h2>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-65.306517%2C-24.202954%2C-65.305517%2C-24.201954&amp;layer=mapnik&amp;marker=-24.202454%2C-65.306017"
+          style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
