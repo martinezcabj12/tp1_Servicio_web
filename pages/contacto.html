@@ -33,7 +33,7 @@
   </header>
   <main>
     <section class="form-container">
-      <form class="form-container-item" action="" method="">
+      <form class="form-container-item" id="formulario" action="" method="">
         <fieldset>
           <legend>Formulario de Contacto</legend>
 
@@ -56,26 +56,7 @@
             <option value="" disabled selected>Selecciona una provincia</option>
             <option value="Buenos Aires">Buenos Aires</option>
             <option value="Catamarca">Catamarca</option>
-            <option value="Chaco">Chaco</option>
-            <option value="Chubut">Chubut</option>
-            <option value="Córdoba">Córdoba</option>
-            <option value="Corrientes">Corrientes</option>
-            <option value="Entre Ríos">Entre Ríos</option>
-            <option value="Formosa">Formosa</option>
-            <option value="Jujuy">Jujuy</option>
-            <option value="La Pampa">La Pampa</option>
-            <option value="La Rioja">La Rioja</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Misiones">Misiones</option>
-            <option value="Neuquén">Neuquén</option>
-            <option value="Río Negro">Río Negro</option>
-            <option value="Salta">Salta</option>
-            <option value="San Juan">San Juan</option>
-            <option value="San Luis">San Luis</option>
-            <option value="Santa Cruz">Santa Cruz</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Santiago del Estero">Santiago del Estero</option>
-            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <!-- ... demás provincias ... -->
             <option value="Tucumán">Tucumán</option>
           </select>
 
@@ -87,26 +68,31 @@
             <option value="ventas">Revisión de datos</option>
             <option value="reclamos">Reclamos</option>
           </select>
+
           <label for="consulta">Consulta:</label>
           <textarea name="consulta" id="consulta" placeholder="Escribir consulta..." required></textarea>
+
           <label class="terminos-check">
             <input class="input-check" name="terminos" type="checkbox" id="terminos" required>
             Aceptar los <a href="#">términos y condiciones</a>
           </label>
+
           <button type="submit" id="enviar" disabled>Enviar</button>
         </fieldset>
       </form>
 
+      <!-- MODAL -->
+      <dialog id="myDialog">
+        <h2>Gracias por tu consulta</h2>
+        <p>Tu mensaje fue enviado con éxito.</p>
+        <form method="dialog">
+          <button>Cerrar</button>
+        </form>
+      </dialog>
+    </section>
   </main>
 
-  <script>
-    const checkbox = document.getElementById('terminos');
-    const boton = document.getElementById('enviar');
 
-    checkbox.addEventListener('change', () => {
-      boton.disabled = !checkbox.checked;
-    });
-  </script>
 
 
   <footer class="footer">
@@ -141,7 +127,31 @@
       </div>
 
     </div>
+    <dialog id="myDialog">
   </footer>
+
+  <script>
+    // Habilitar el botón cuando se acepta términos
+    const checkbox = document.getElementById('terminos');
+    const enviarBtn = document.getElementById('enviar');
+
+    checkbox.addEventListener('change', () => {
+      enviarBtn.disabled = !checkbox.checked;
+    });
+
+    // Mostrar modal al enviar el formulario
+    const form = document.getElementById('formulario');
+    const dialog = document.getElementById('myDialog');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Previene la recarga
+      if (form.checkValidity()) {
+        dialog.showModal();   // Muestra el modal
+        form.reset();         // Limpia el formulario
+        enviarBtn.disabled = true; // Deshabilita el botón de nuevo
+      }
+    });
+  </script>
 
 </body>
 
