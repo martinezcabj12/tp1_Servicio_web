@@ -27,7 +27,181 @@
       </ul>
     </nav>
   </header>
+  <main>
+    <!-- SECTION: Filtrado + Galería estilo Masonry -->
+    <section class="clases">
 
+      <!-- Inputs para filtrado (no visibles) -->
+      <input type="radio" name="categoria" id="todos" checked>
+      <input type="radio" name="categoria" id="musculacion">
+      <input type="radio" name="categoria" id="crossfit">
+      <input type="radio" name="categoria" id="yoga">
+      <input type="radio" name="categoria" id="spinning">
+
+      <!-- Botones -->
+      <div class="filtros">
+        <label for="todos">Todos</label>
+        <label for="musculacion">Musculación</label>
+        <label for="crossfit">CrossFit</label>
+        <label for="yoga">Yoga</label>
+        <label for="spinning">Spinning</label>
+      </div>
+
+      <!-- Galería estilo masonry -->
+      <div class="galeria">
+        <!-- Musculación -->
+        <div class="clase musculacion"><img src="../public/img/category/musculacion1.jpg" alt="Musculación 1"></div>
+        <div class="clase musculacion"><img src="../public/img/category/musculacion2.jpeg" alt="Musculación 2"></div>
+        <div class="clase musculacion"><img src="../public/img/category/musculacion3.jpg" alt="Musculación 3"></div>
+        <div class="clase musculacion"><img src="../public/img/category/musculacion4.jpg" alt="Musculación 4"></div>
+        <div class="clase musculacion"><img src="../public/img/category/musculacion5.jpg" alt="Musculación 5"></div>
+
+        <!-- CrossFit -->
+        <div class="clase crossfit"><img src="../public/img/category/crossfit1.jpg" alt="CrossFit 1"></div>
+        <div class="clase crossfit"><img src="../public/img/category/crossfit2.webp" alt="CrossFit 2"></div>
+        <div class="clase crossfit"><img src="../public/img/category/crossfit3.jpg" alt="CrossFit 3"></div>
+        <div class="clase crossfit"><img src="../public/img/category/crossfit4.jpg" alt="CrossFit 4"></div>
+        <div class="clase crossfit"><img src="../public/img/category/crossfit5.jpg" alt="CrossFit 5"></div>
+
+        <!-- Yoga -->
+        <div class="clase yoga"><img src="../public/img/category/yoga1.jpg" alt="Yoga 1"></div>
+        <div class="clase yoga"><img src="../public/img/category/yoga2.jpg" alt="Yoga 2"></div>
+        <div class="clase yoga"><img src="../public/img/category/yoga3.jpg" alt="Yoga 3"></div>
+        <div class="clase yoga"><img src="../public/img/category/yoga4.jpg" alt="Yoga 4"></div>
+        <div class="clase yoga"><img src="../public/img/category/yoga5.jpg" alt="Yoga 5"></div>
+
+        <!-- Spinning -->
+        <div class="clase spinning"><img src="../public/img/category/spinning1.jpeg" alt="Spinning 1"></div>
+        <div class="clase spinning"><img src="../public/img/category/spinning2.jpg" alt="Spinning 2"></div>
+        <div class="clase spinning"><img src="../public/img/category/spinning3.jpg" alt="Spinning 3"></div>
+        <div class="clase spinning"><img src="../public/img/category/spinning4.jpg" alt="Spinning 4"></div>
+        <div class="clase spinning"><img src="../public/img/category/spinning5.jpg" alt="Spinning 5"></div>
+      </div>
+    </section>
+
+    <!-- tarjetas Información -->
+    <section class="info-clases">
+      <h2>Información de Clases</h2>
+      <div class="tarjetas-container">
+        <div class="tarjeta">
+          <img src="../public/img/category/musculacion1.jpg" alt="Musculación">
+          <div class="overlay">
+            <h3>Musculación</h3>
+            <p>Fortalecé tus músculos con rutinas personalizadas.</p>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <img src="../public/img/category/yoga1.jpg" alt="Yoga">
+          <div class="overlay">
+            <h3>Yoga</h3>
+            <p>Mejorá tu flexibilidad y reducí el estrés.</p>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <img src="../public/img/category/spinning1.jpeg" alt="Spinning">
+          <div class="overlay">
+            <h3>Spinning</h3>
+            <p>Cardio intenso con música motivadora.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horarios de Clases -->
+    <section class="horarios">
+      <h2>Horarios Semanales</h2>
+      <div class="tabla-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>08:00</th>
+              <th>10:00</th>
+              <th>14:00</th>
+              <th>18:00</th>
+              <th>20:00</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Lunes</strong></td>
+              <td>Yoga</td>
+              <td>Spinning</td>
+              <td>Musculación</td>
+              <td>CrossFit</td>
+              <td>Yoga</td>
+            </tr>
+            <tr>
+              <td><strong>Martes</strong></td>
+              <td>CrossFit</td>
+              <td>Yoga</td>
+              <td>Spinning</td>
+              <td>Musculación</td>
+              <td>CrossFit</td>
+            </tr>
+            <tr>
+              <td><strong>Miércoles</strong></td>
+              <td>Musculación</td>
+              <td>Spinning</td>
+              <td>Yoga</td>
+              <td>CrossFit</td>
+              <td>Spinning</td>
+            </tr>
+            <tr>
+              <td><strong>Jueves</strong></td>
+              <td>Yoga</td>
+              <td>Musculación</td>
+              <td>CrossFit</td>
+              <td>Spinning</td>
+              <td>Musculación</td>
+            </tr>
+            <tr>
+              <td><strong>Viernes</strong></td>
+              <td>Spinning</td>
+              <td>Yoga</td>
+              <td>CrossFit</td>
+              <td>Musculación</td>
+              <td>Yoga</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h2>Suscribite a nuestro Newsletter</h2>
+        <form>
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="footer-social">
+        <h2>Seguinos</h2>
+        <div class="social-links">
+          <a href="#" target="_blank">Facebook</a>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">X</a>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="footer-map">
+        <h2>Encontranos</h2>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-65.306517%2C-24.202954%2C-65.305517%2C-24.201954&amp;layer=mapnik&amp;marker=-24.202454%2C-65.306017"
+          style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </footer>
 </body>
 
 </html>
