@@ -9,6 +9,7 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  font-family: var(--font-menu);
 }
 
 .filtros label {
