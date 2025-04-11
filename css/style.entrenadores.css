@@ -1,0 +1,116 @@
+.entrenadores-section {
+  padding: 4rem 2rem;
+  background: var(--color-background);
+  text-align: center;
+}
+
+.entrenadores-section h2 {
+  font-family: var(--font-black);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.entrenadores-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  height: 360px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card-front img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-front h3,
+.card-back h3 {
+  font-size: 1.2rem;
+  color: var(--color-secundary);
+  margin-top: 1rem;
+  font-family: var(--font-bold);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+}
+
+.card-back p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 1rem 0;
+  font-family: var(--font-regular);
+}
+
+.habilidad {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+.habilidad span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.barra {
+  width: 100%;
+  background: #ddd;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 0.3rem;
+}
+
+.progreso {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secundary));
+  animation: llenar 2s ease-out forwards;
+  width: 0;
+  /* Será definido en inline style */
+}
+
+@keyframes llenar {
+  from {
+    width: 0;
+  }
+}

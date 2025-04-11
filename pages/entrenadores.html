@@ -7,7 +7,7 @@
   <title>Entrenadores - Gym Mamba</title>
   <link href="../css/font.css" rel="stylesheet">
   <link href="../css/global.css" rel="stylesheet">
-  <link href="../css/style.clases.css" rel="stylesheet">
+  <link href="../css/style.entrenadores.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,12 +24,99 @@
             <li><a href="./entrenadores.html">Entrenadores</a></li>
             <li><a href="./precios.html">Precios</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./bloc.html">Blog</a></li>
           </ul>
         </li>
       </ul>
     </nav>
   </header>
+  <section class="entrenadores-section">
+    <h2>Nuestros Entrenadores</h2>
+    <ul class="entrenadores-grid">
+      <li class="card">
+        <article class="card-inner">
+          <header class="card-front">
+            <img src="../public/img/entrenador1.jpg" alt="Lucía Ríos, entrenadora">
+            <h3>Lucía Ríos</h3>
+          </header>
+          <section class="card-back">
+            <h3>Lucía Ríos</h3>
+            <p>Especialista en fuerza funcional y nutrición deportiva.</p>
+            <dl>
+              <div class="habilidad">
+                <dt>Fuerza</dt>
+                <dd class="barra">
+                  <div class="progreso" style="width: 90%"></div>
+                </dd>
+              </div>
+              <div class="habilidad">
+                <dt>Flexibilidad</dt>
+                <dd class="barra">
+                  <div class="progreso" style="width: 80%"></div>
+                </dd>
+              </div>
+            </dl>
+          </section>
+        </article>
+      </li>
 
+      <li class="card">
+        <article class="card-inner">
+          <header class="card-front">
+            <img src="../public/img/entrenador2.jpg" alt="Matías López, entrenador">
+            <h3>Matías López</h3>
+          </header>
+          <section class="card-back">
+            <h3>Matías López</h3>
+            <p>Entrenador de cardio HIIT y especialista en resistencia.</p>
+            <dl>
+              <div class="habilidad">
+                <dt>Resistencia</dt>
+                <dd class="barra">
+                  <div class="progreso" style="width: 95%"></div>
+                </dd>
+              </div>
+              <div class="habilidad">
+                <dt>Coordinación</dt>
+                <dd class="barra">
+                  <div class="progreso" style="width: 85%"></div>
+                </dd>
+              </div>
+            </dl>
+          </section>
+        </article>
+      </li>
+    </ul>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h2>Suscribite a nuestro Newsletter</h2>
+        <form>
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+      <!-- Redes sociales -->
+      <div class="footer-social">
+        <h2>Seguinos</h2>
+        <div class="social-links">
+          <a href="#" target="_blank">Facebook</a>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">X</a>
+        </div>
+      </div>
+      <!-- Mapa -->
+      <div class="footer-map">
+        <h2>Encontranos</h2>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-65.306517%2C-24.202954%2C-65.305517%2C-24.201954&amp;layer=mapnik&amp;marker=-24.202454%2C-65.306017"
+          style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
